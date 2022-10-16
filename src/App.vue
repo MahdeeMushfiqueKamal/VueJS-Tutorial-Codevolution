@@ -1,17 +1,16 @@
 <template>
   <h1> Hello {{ name}} </h1>
   <div v-text="msg"></div>
-
+  <div v-html="popup"></div>
 </template>
 
 <script>
-
 export default {
   name: 'App',
   data(){
     return {
-      name: "Dhrubo",
-      msg: "Have a nice day sir"
+      name: "Dhrubo", msg: "Have a nice day sir", 
+      popup: '<a href="#", onclick="alert("You have been hacked")"> Click me! </a>', 
     }
   }
 }
