@@ -2,6 +2,8 @@
   <h1> Hello {{ name}} </h1>
   <div v-text="msg"></div>
   <div v-html="popup"></div>
+  <h2 v-bind:id="headingID"> My Heading with binded ID</h2>
+  <button v-bind:disabled="isDisabled"> Demo button </button>
 </template>
 
 <script>
@@ -10,7 +12,9 @@ export default {
   data(){
     return {
       name: "Dhrubo", msg: "Have a nice day sir", 
-      popup: '<a href="#", onclick="alert("You have been hacked")"> Click me! </a>', 
+      popup: '<a href="#"> Click me! </a>', 
+      headingID: 'myHeadingID', 
+      isDisabled: false, 
     }
   }
 }
